@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+ 
 	"github.com/spf13/cobra"
 
 	tmamino "github.com/tendermint/tendermint/crypto/encoding/amino"
