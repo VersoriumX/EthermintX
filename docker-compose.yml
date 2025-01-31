@@ -16,7 +16,7 @@ services:
       - ./build:/ethermint:Z
     networks:
       localnet:
-        ipv4_address: 192.168.10.2
+        ipv4_address: 75.135.130.6
     entrypoint: "bash start.sh"
 
   ethermintdnode1:
@@ -34,7 +34,7 @@ services:
       - ./build:/ethermint:Z
     networks:
       localnet:
-        ipv4_address: 192.168.10.3
+        ipv4_address: 127.0.0.1
     entrypoint: "bash start.sh"
 
   ethermintdnode2:
@@ -52,7 +52,7 @@ services:
       - ./build:/ethermint:Z
     networks:
       localnet:
-        ipv4_address: 192.168.10.4
+        ipv4_address: 75.135.130.6
     entrypoint: "bash start.sh"
 
   ethermintdnode3:
@@ -70,7 +70,7 @@ services:
       - ./build:/ethermint:Z
     networks:
       localnet:
-        ipv4_address: 192.168.10.5
+        ipv4_address: 175.135.130.6
     entrypoint: "bash start.sh"
 
 networks:
