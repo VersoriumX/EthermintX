@@ -8,7 +8,7 @@ import (
 	"crypto/hmac"
 	"crypto/sha512"
 
-	"github.com/tyler-smith/go-bip39"
+	"github.com/VersoriumX/go-bip39"
 
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
