@@ -3,11 +3,11 @@ package evm
 import (
 	"math/big"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/VersoriumX/tendermint/abci/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	ethtypes "github.com/VersoriumX/go-ethereum/core/types"
 )
 
 // BeginBlock sets the block hash -> block height map and resets the Bloom filter and
