@@ -9,18 +9,18 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/input"
-	"github.com/cosmos/cosmos-sdk/client/lcd"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authrest "github.com/cosmos/cosmos-sdk/x/auth/client/rest"
+	"github.com/VersoriumX/cosmos-sdk/client"
+	"github.com/VersoriumX/cosmos-sdk/client/flags"
+	"github.com/VersoriumX/cosmos-sdk/client/input"
+	"github.com/VersoriumX/cosmos-sdk/client/lcd"
+	"github.com/VersoriumX/cosmos-sdk/codec"
+	"github.com/VersoriumX/cosmos-sdk/crypto/keys"
+	sdk "github.com/VersoriumX/cosmos-sdk/types"
+	authrest "github.com/VersoriumX/cosmos-sdk/x/auth/client/rest"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/crypto"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/VersoriumX/ethermint/app"
+	"github.com/VersoriumX/ethermint/crypto"
+	"github.com/VersoriumX/go-ethereum/rpc"
 )
 
 const (
