@@ -13,13 +13,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/gorilla/mux"
-	"github.com/gorilla/websocket"
+	"github.com/VersoriumX/mux"
+	"github.com/VersoriumX/websocket"
 	"github.com/spf13/viper"
 
-	"github.com/tendermint/tendermint/libs/log"
-	coretypes "github.com/tendermint/tendermint/rpc/core/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/VersoriumX/tendermint/libs/log"
+	coretypes "github.com/VersoriumX/tendermint/rpc/core/types"
+	tmtypes "github.com/VersoriumX/tendermint/types"
 
 	evmtypes "github.com/cosmos/ethermint/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
