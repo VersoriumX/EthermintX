@@ -6,12 +6,12 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/VersoriumX/tendermint/libs/log"
+	tmtypes "github.com/VersoriumX/tendermint/types"
 
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	evmtypes "github.com/VersoriumX/ethermint/x/evm/types"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
+	"github.com/VersoriumX/cosmos-sdk/client/context"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
@@ -225,7 +225,7 @@ func (e *EthermintBackend) getGasLimit() (int64, error) {
 func (e *EthermintBackend) GetTransactionLogs(txHash common.Hash) ([]*ethtypes.Log, error) {
 	ctx := e.cliCtx
 
-	res, height, err := ctx.QueryWithData(fmt.Sprintf("custom/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryTransactionLogs, txHash.Hex()), nil)
+	res, height, err := ctx.QueryWithData(fmt.Sprintf("VersoriumX/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryTransactionLogs, txHash.Hex()), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -268,7 +268,7 @@ func (e *EthermintBackend) PendingTransactions() ([]*Transaction, error) {
 
 // GetLogs returns all the logs from all the ethreum transactions in a block.
 func (e *EthermintBackend) GetLogs(blockHash common.Hash) ([][]*ethtypes.Log, error) {
-	res, _, err := e.cliCtx.Query(fmt.Sprintf("custom/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryHashToHeight, blockHash.Hex()))
+	res, _, err := e.cliCtx.Query(fmt.Sprintf("VersoriumX/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryHashToHeight, blockHash.Hex()))
 	if err != nil {
 		return nil, err
 	}
@@ -286,7 +286,7 @@ func (e *EthermintBackend) GetLogs(blockHash common.Hash) ([][]*ethtypes.Log, er
 	var blockLogs = [][]*ethtypes.Log{}
 	for _, tx := range block.Block.Txs {
 		// NOTE: we query the state in case the tx result logs are not persisted after an upgrade.
-		res, _, err := e.cliCtx.QueryWithData(fmt.Sprintf("custom/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryTransactionLogs, common.BytesToHash(tx.Hash()).Hex()), nil)
+		res, _, err := e.cliCtx.QueryWithData(fmt.Sprintf("VersoriumX/%s/%s/%s", evmtypes.ModuleName, evmtypes.QueryTransactionLogs, common.BytesToHash(tx.Hash()).Hex()), nil)
 		if err != nil {
 			continue
 		}
