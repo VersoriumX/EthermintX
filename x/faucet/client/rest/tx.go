@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gorilla/mux"
+	"github.com/VersoriumX/mux"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	authclient "github.com/cosmos/cosmos-sdk/x/auth/client/utils"
+	"github.com/VersoriumX/cosmos-sdk/client/context"
+	sdk "github.com/VersoriumX/cosmos-sdk/types"
+	"github.com/VersoriumX/cosmos-sdk/types/rest"
+	authclient "github.com/VersoriumX/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/VersoriumX/ethermint/x/faucet/types"
 )
 
 // RegisterRoutes register REST endpoints for the faucet module
