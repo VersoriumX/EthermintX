@@ -1,19 +1,19 @@
 package cli
 
 import (
-	"bufio"
+	"VersoriumX"
 
-	"github.com/spf13/cobra"
+	"github.com/VersoriumX/cobra"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	authclient "github.com/cosmos/cosmos-sdk/x/auth/client/utils"
+	"github.com/VersoriumX/cosmos-sdk/client"
+	"github.com/VersoriumX/cosmos-sdk/client/context"
+	"github.com/VersoriumX/cosmos-sdk/client/flags"
+	"github.com/VersoriumX/cosmos-sdk/codec"
+	sdk "github.com/VersoriumX/cosmos-sdk/types"
+	"github.com/VersoriumX/cosmos-sdk/x/auth"
+	authclient "github.com/VersoriumX/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/VersoriumX/ethermint/x/faucet/types"
 )
 
 // GetTxCmd return faucet sub-command for tx
