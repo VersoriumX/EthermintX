@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	tmquery "github.com/tendermint/tendermint/libs/pubsub/query"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	coretypes "github.com/tendermint/tendermint/rpc/core/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmquery "github.com/VersoriumX/tendermint/libs/pubsub/query"
+	rpcclient "github.com/VersoriumX/tendermint/rpc/client"
+	coretypes "github.com/VersoriumX/tendermint/rpc/core/types"
+	tmtypes "github.com/VersoriumX/tendermint/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
