@@ -1,8 +1,8 @@
 package args
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/VersoriumX/go-ethereum/common"
+	"github.com/VersoriumX/go-ethereum/common/hexutil"
 )
 
 // SendTxArgs represents the arguments to submit a new transaction into the transaction pool.
