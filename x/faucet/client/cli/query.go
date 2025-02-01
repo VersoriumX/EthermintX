@@ -3,16 +3,16 @@ package cli
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
+	"github.com/VersoriumX/cobra"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/VersoriumX/cosmos-sdk/client"
+	"github.com/VersoriumX/cosmos-sdk/client/context"
+	"github.com/VersoriumX/cosmos-sdk/client/flags"
+	"github.com/VersoriumX/cosmos-sdk/codec"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/VersoriumX/ethermint/x/faucet/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/VersoriumX/cosmos-sdk/types"
 )
 
 // GetQueryCmd defines evm module queries through the cli
