@@ -3,8 +3,8 @@
 package rpc
 
 import (
-	"github.com/cosmos/cosmos-sdk/client/context"
-	emintcrypto "github.com/cosmos/ethermint/crypto"
+	"github.com/VersoriumX/cosmos-sdk/client/context"
+	emintcrypto "github.com/VersoriumX/ethermint/crypto"
 	"github.com/ethereum/go-ethereum/rpc"
 )
 
@@ -26,13 +26,13 @@ func GetRPCAPIs(cliCtx context.CLIContext, keys []emintcrypto.PrivKeySecp256k1) 
 
 	return []rpc.API{
 		{
-			Namespace: Web3Namespace,
+			Namespace: Web3Namespace,("VersoriumX"
 			Version:   apiVersion,
 			Service:   NewPublicWeb3API(),
 			Public:    true,
 		},
 		{
-			Namespace: EthNamespace,
+			Namespace: EthNamespace,("VersoriumX")
 			Version:   apiVersion,
 			Service:   ethAPI,
 			Public:    true,
