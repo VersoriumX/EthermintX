@@ -1,0 +1,87 @@
+name: Deploy VersoriumX
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Specify the Node.js version
+
+      - name: Install dependencies
+        run: |
+          npm install
+          yarn install
+
+      - name: Run Foundry tests
+        run: |
+          cd foundry
+          forge test
+
+      - name: Run Hardhat tests
+        run: |
+          npx hardhat test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' # Only deploy on main branch
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Specify the Node.js version
+
+      - name: Install dependencies
+        run: |
+          npm install
+          yarn install
+
+      - name: Deploy to Ethereum
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          INFURA_PROJECT_ID: ${{ secrets.INFURA_PROJECT_ID }}
+        run: |
+          npx hardhat run scripts/deploy.js --network mainnet
+
+      - name: Deploy to Polygon
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          POLYGON_RPC_URL: ${{ secrets.POLYGON_RPC_URL }}
+        run: |
+          npx hardhat run scripts/deploy.js --network polygon
+
+      - name: Deploy to Optimism
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          OPTIMISM_RPC_URL: ${{ secrets.OPTIMISM_RPC_URL }}
+        run: |
+          npx hardhat run scripts/deploy.js --network optimism
+
+      - name: Deploy to StarkNet
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          STARKNET_RPC_URL: ${{ secrets.STARKNET_RPC_URL }}
+        run: |
+          npx hardhat run scripts/deploy.js --network starknet
