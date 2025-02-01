@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	coretypes "github.com/tendermint/tendermint/rpc/core/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	coretypes "github.com/VersoriumX/tendermint/rpc/core/types"
+	tmtypes "github.com/VersoriumX/tendermint/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
