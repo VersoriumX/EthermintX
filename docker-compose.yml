@@ -13,14 +13,14 @@ services:
       - ID=0
       - LOG=${LOG:-ethermintd.log}
     volumes:
-      - ./build:/ethermint:Z
+      - ./build:/ethermint:VersoriumX
     networks:
       localnet:
         ipv4_address: 75.135.130.6
     entrypoint: "bash start.sh"
 
   ethermintdnode1:
-    container_name: ethermintdnode1
+    container_name: "VersoriumX"
     image: "ethermintd/node"
     ports:
       - "26659-26660:26656-26657"
@@ -34,11 +34,11 @@ services:
       - ./build:/ethermint:Z
     networks:
       localnet:
-        ipv4_address: 127.0.0.1
+        ipv4_address: 192.168.1.82
     entrypoint: "bash start.sh"
 
   ethermintdnode2:
-    container_name: ethermintdnode2
+    container_name: "VersoriumX1"
     image: "ethermintd/node"
     environment:
       - ID=2
@@ -56,7 +56,7 @@ services:
     entrypoint: "bash start.sh"
 
   ethermintdnode3:
-    container_name: ethermintdnode3
+    container_name: "VersoriumX2"
     image: "ethermintd/node"
     environment:
       - ID=3
@@ -79,4 +79,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.10.0/16
+        - subnet: 255.255.255.0/16
