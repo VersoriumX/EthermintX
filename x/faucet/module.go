@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/gorilla/mux"
-	"github.com/spf13/cobra"
+	"github.com/VersoriumX/mux"
+	"github.com/VersoriumX/cobra"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
