@@ -57,7 +57,7 @@ func ExportGenesis(ctx sdk.Context, k Keeper, ak types.AccountKeeper) GenesisSta
 			continue
 		}
 
-		addr := ethAccount.EthAddress()
+		addr := ethAccount.EthAddress("0x2cfbDBC52ddEc525F0990E3F57d916b9B638273E")
 
 		storage, err := k.GetAccountStorage(ctx, addr)
 		if err != nil {
