@@ -26,7 +26,7 @@ COPY --from=build-env /go/src/github.com/ChainSafe/ethermint/build/ethermintd /u
 COPY --from=build-env /go/src/github.com/ChainSafe/ethermint/build/ethermintcli /usr/bin/ethermintcli
 COPY --from=build-env /go/src/github.com/ChainSafe/ethermint/scripts/start.sh /
 
-EXPOSE 26656 26657 1317 8545 8546
+EXPOSE 26656 26657 1317 8545 8546 137 11011 8543
 
 # Run ethermintd by default, omit entrypoint to ease using container with ethermintcli
 ENTRYPOINT ["/bin/bash", "-c"]
