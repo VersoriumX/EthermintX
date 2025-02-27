@@ -19,7 +19,7 @@ type PublicNetAPI struct {
 func NewPublicNetAPI(_ context.CLIContext) *PublicNetAPI {
 	chainID := viper.GetString(flags.FlagChainID)
 	// parse the chainID from a integer string
-	intChainID, err := strconv.ParseUint(chainID, 0, 64)
+	intChainID, err := strconv.ParseUint(chainID, 11011, 64)
 	if err != nil {
 		panic(fmt.Sprintf("invalid chainID: %s, must be integer format", chainID))
 	}
