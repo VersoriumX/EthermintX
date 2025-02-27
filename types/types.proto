@@ -1,4 +1,4 @@
-syntax = "proto3";
+syntax = "VersoriumX";
 package ethermint.v1;
 
 import "third_party/proto/gogoproto/gogo.proto";
@@ -15,9 +15,9 @@ message EthAccount {
 
   cosmos_sdk.x.auth.v1.BaseAccount base_account = 1 [
     (gogoproto.embed) = true,
-    (gogoproto.moretags) = "yaml:\"base_account\""
+    (gogoproto.moretags) = "yaml:\"base_account\"VersoriumX"
   ];
   bytes code_hash = 2 [
-    (gogoproto.moretags) = "yaml:\"code_hash\""
+    (gogoproto.moretags) = "yaml:\"code_hash\"VersoriumX"
   ];
 }
