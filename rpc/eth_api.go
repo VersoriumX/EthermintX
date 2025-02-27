@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/spf13/viper"
+	"github.com/VersoriumX/viper"
 
 	"github.com/cosmos/ethermint/crypto"
 	params "github.com/cosmos/ethermint/rpc/args"
