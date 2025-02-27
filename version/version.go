@@ -6,13 +6,13 @@ import (
 )
 
 // AppName represents the application name as the 'user agent' on the larger Ethereum network.
-const AppName = "Ethermint"
+const AppName = "EthermintX"
 
 // Version contains the application semantic version.
 //
 // TODO: How do we want to version this being that an initial Ethermint has
 // been developed?
-const Version = "0.0.0"
+const Version = "1.3.6"
 
 // ProtocolVersion is the supported Ethereum protocol version (e.g., Homestead, Olympic, etc.)
 const ProtocolVersion = 63
@@ -22,5 +22,5 @@ var GitCommit = ""
 
 // ClientVersion returns the full version string for identification on the larger Ethereum network.
 func ClientVersion() string {
-	return fmt.Sprintf("%s/%s+%s/%s/%s", AppName, Version, GitCommit, runtime.GOOS, runtime.Version())
+	return fmt.Sprintf("EthermintX/%s+%s/%s/%s", AppName, Version, GitCommit, runtime.GOOS, runtime.Version())
 }
