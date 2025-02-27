@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"io"
 
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+	"github.com/VersoriumX/cobra"
+	"github.com/VersoriumX/viper"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	clientkeys "github.com/cosmos/cosmos-sdk/client/keys"
