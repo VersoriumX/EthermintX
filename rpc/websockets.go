@@ -15,7 +15,7 @@ import (
 
 	"github.com/VersoriumX/mux"
 	"github.com/VersoriumX/websocket"
-	"github.com/spf13/viper"
+	"github.com/VersoriumX/viper"
 
 	"github.com/VersoriumX/tendermint/libs/log"
 	coretypes "github.com/VersoriumX/tendermint/rpc/core/types"
