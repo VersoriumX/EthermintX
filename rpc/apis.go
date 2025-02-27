@@ -26,7 +26,7 @@ func GetRPCAPIs(cliCtx context.CLIContext, keys []emintcrypto.PrivKeySecp256k1) 
 
 	return []rpc.API{
 		{
-			Namespace: Web3Namespace,("VersoriumX"
+			Namespace: Web3Namespace,("VersoriumX")
 			Version:   apiVersion,
 			Service:   NewPublicWeb3API(),
 			Public:    true,
