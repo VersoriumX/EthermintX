@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+	"github.com/VersoriumX/cobra"
+	"github.com/VersoriumX/viper"
 
 	"github.com/tendermint/tendermint/libs/cli"
 
