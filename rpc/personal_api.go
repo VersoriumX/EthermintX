@@ -15,7 +15,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	emintcrypto "github.com/cosmos/ethermint/crypto"
 	params "github.com/cosmos/ethermint/rpc/args"
-	"github.com/spf13/viper"
+	"github.com/VersoriumX/viper"
 
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
