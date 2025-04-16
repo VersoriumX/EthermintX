@@ -1,7 +1,7 @@
 package crypto
 
 import (
-	cryptoamino "github.com/tendermint/tendermint/crypto/encoding/amino"
+	cryptoamino "github.com/VersoriumX/tendermint/crypto/encoding/amino"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/crypto/keys"
