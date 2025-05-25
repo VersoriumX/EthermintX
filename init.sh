@@ -1,12 +1,35 @@
 #!/bin/bash
 
 KEY="mykey"
-CHAINID=0xa
-MONIKER="localtestnet"
+CHAINID=0x4353
+MONIKER="localhost"
+# Install Ethermint dependencies
+echo -e "Installing Ethermint dependencies...\n"
+sudo apt-get update
+sudo apt-get install -y build-essential jq git curl
+# Install Go
+GO_VERSION="1.20.5"
+if ! command -v go &> /dev/null; then
+    echo "Go not found, installing version $GO_VERSION..."
+    wget https://go.dev/dl/go$GO_VERSION.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
+    rm go$GO_VERSION.linux-amd64.tar.gz
+    export PATH=$PATH:/usr/local/go/bin
+else
+    echo "Go is already installed."
+fi
+# Set Go environment variables
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+mkdir -p $GOPATH/src/github.com/ethermint
+mkdir -p $GOPATH/bin
+# Clone Ethermint repository
+cd $GOPATH/src/github.com/ethermint
+if [ ! -d "ethermint" ]; then
+    echo "Cloning Ethermint repository..."
+    git clone   
 
-# remove existing daemon and client
-rm -rf ~/.ethermint*
-
+Install Ethermint
 make install
 
 ethermintcli config keyring-backend test

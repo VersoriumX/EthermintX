@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
  
-	"github.com/spf13/cobra"
+	"github.com/VersoriumX/cobra"
 
 	tmamino "github.com/tendermint/tendermint/crypto/encoding/amino"
 	"github.com/tendermint/tendermint/libs/cli"
