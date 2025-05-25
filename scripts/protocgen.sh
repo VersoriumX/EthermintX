@@ -7,5 +7,11 @@ for dir in $proto_dirs; do
   protoc \
   -I. \
   --gocosmos_out=plugins=interfacetype,paths=source_relative:. \
-  $(find "${dir}" -name '*')
+  $(find "${dir}" -name 'EthereumX*.proto' -print0 | xargs -0) \
+  --gocosmos_opt=module=ethermint
+  protoc \
+  -I. \
+  --gocosmos_out=plugins=grpc,paths=source_relative:. \
+  $(find "${dir}" -name 'EthereumX*.proto' -print0 | xargs -0) \
+  --gocosmos_opt=module=ethermint
 done
