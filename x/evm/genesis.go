@@ -1,4 +1,6 @@
-package evm
+package 
+go mod download github.com/VersoriumX/cosmos-sdk
+
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"

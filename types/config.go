@@ -1,7 +1,6 @@
-package types
-
+package type
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/VersoriumX/cosmos-sdk/types"
 )
 
 const (

@@ -6,13 +6,31 @@ import (
 	"fmt"
 	"math/big"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	#[derive(Accounts)]
+	pub struct Exchange<'info> {
+	  #[account(signer)]
+	  pub taker: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub taker_deposit_token_account: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub taker_receive_token_account: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub pda_deposit_token_account: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub initializer_receive_token_account: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub initializer_main_account: AccountInfo<'info>,
+	  #[account(mut)]
+	  pub escrow_account: AccountInfo<'info>,
+	  pub pda_account: AccountInfo<'info>,
+	  pub token_program: AccountInfo<'info>,
+	}
+	 "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
 type (
-	// GenesisState defines the evm module genesis state
-	GenesisState struct {
+		GenesisState struct {
 		Accounts []GenesisAccount  `json:"accounts"`
 		TxsLogs  []TransactionLogs `json:"txs_logs"`
 	}

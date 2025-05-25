@@ -1,4 +1,6 @@
-package types
+package 
+go mod download github.com/VersoriumX/cosmos-sdk
+
 
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
