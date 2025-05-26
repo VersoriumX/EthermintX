@@ -3,10 +3,10 @@ name: Deploy VersoriumX
 on:
   push:
     branches:
-      - main
+      - EthermintX
   pull_request:
     branches:
-      - main
+      - EthermintX
 
 permissions:
   contents: read
