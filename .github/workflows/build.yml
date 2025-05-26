@@ -2,7 +2,7 @@ name: Build
 on:
   pull_request:
     branches:
-      - "cosmos/ethermint"
+      - "VersoriumX/EthermintX"
 
 jobs:
   cleanup-runs:
