@@ -3,10 +3,10 @@ name:XSCD Security and Cloning Defense
 on:
   push:
     branches:
-      - main
+      - EthermintX
   pull_request:
     branches:
-      - main
+      - EthermintX
 
 jobs:
   security:
