@@ -7,9 +7,9 @@ name: VersoriumX
 
 on:
   push:
-    branches: [ "cosmos/ethermint" ]
+    branches: [ "VersoriumX/EthermintX" ]
   pull_request:
-    branches: [ "cosmos/ethermint" ]
+    branches: [ "VersoriumX/EthermintX" ]
   schedule:
     - cron: '32 19 * * 2'
 
