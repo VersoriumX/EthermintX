@@ -6,7 +6,7 @@ on:
   pull_request:
   push:
     branches:
-      - cosmos/ethermint
+      - VersoriumX/EthermintX
 
 jobs:
   cleanup-runs:
