@@ -1,8 +1,8 @@
 #!/bin/bash
 
-KEY="mykey"
-CHAINID=0x4353
-MONIKER="localhost"
+KEY="0x22d491bde2303f2f43325b2108d26f1eaba1e32b"
+CHAINID=0x4233324
+MONIKER="localx.local"
 # Install Ethermint dependencies
 echo -e "Installing Ethermint dependencies...\n"
 sudo apt-get update
@@ -68,7 +68,7 @@ ethermintd validate-genesis
 
 # Command to run the rest server in a different terminal/window
 echo -e '\nrun the following command in a different terminal/window to run the REST server and JSON-RPC:'
-echo -e "ethermintcli rest-server --laddr \"tcp://localhost:8545\" --unlock-key $KEY --chain-id $CHAINID --trace\n"
+echo -e "ethermintcli rest-server --laddr \"tcp://localx.local:8545\" --unlock-key $KEY --chain-id $CHAINID --trace\n"
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)
 ethermintd start --pruning=nothing --rpc.unsafe --log_level "main:info,state:info,mempool:info" --trace
