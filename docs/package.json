@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vuepress-theme-cosmos": "^1.0.46"
+    "vuepress-theme-cosmos": "^1.0.184"
   },
   "devDependencies": {
     "watchpack": "^2.4.4"
